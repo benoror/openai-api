@@ -22,7 +22,7 @@ const OPEN_AI_API_KEY = ####################
 const openai = new OpenAI(OPEN_AI_API_KEY);
 
 (async () => {
-  await const gptResponse = openai.complete({
+  const gptResponse = await openai.complete({
     engine: 'davinci',
     prompt: 'this is a test',
     maxTokens: 5,
@@ -40,7 +40,7 @@ const openai = new OpenAI(OPEN_AI_API_KEY);
 })();
 
 (async () => {
-  await const gptResponse = openai.search({
+  const gptResponse = await openai.search({
     engine: 'davinci',
     documents: ["White House", "hospital", "school"],
     query: "the president"
